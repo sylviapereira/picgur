@@ -1,0 +1,18 @@
+<h1>Add a picture</h1>
+<%= form_tag "/pics" do %>
+  <p>
+    <%= label_tag :art_maker %><br>
+    <%= text_field_tag :art_maker %>
+  </p>
+  <p>
+    <%= label_tag :art_name %><br>
+    <%= text_field_tag :art_name %>
+  </p>
+  <p>
+    <%= label_tag :url %><br>
+    <%= text_field_tag :url %>
+  </p>
+  <p>
+    <%= submit_tag "Save" %>
+  </p>
+<% end %>
