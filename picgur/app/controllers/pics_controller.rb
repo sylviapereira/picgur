@@ -22,6 +22,20 @@ class PicsController < ApplicationController
     end
   end
 
+  def edit
+    @pic = Pic.find(params[:id])
+  end
+
+  def update
+    @pic = Pic.find(params[:id])
+
+    if @pic.update_attributes(pic_params)
+      redirect_to "/pics/#{@pic.id}"
+    else
+      render :edit
+    end
+  end
+
   private
 def pic_params
   params.require(:pic).permit(:art_maker, :art_name, :url)

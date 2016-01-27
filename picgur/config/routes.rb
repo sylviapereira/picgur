@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post 'pics' => 'pics#create'
   get 'pics/new' => 'pics#new'
 
+  get 'pics/:id/edit' => "pics#edit", as: "edit_pic"
+  patch 'pics/:id' => "pics#update"
+
   get 'pics/:id' => 'pics#show', as: 'pic'
 end
   # The priority is based upon order of creation: first created -> highest priority.
