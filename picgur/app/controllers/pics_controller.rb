@@ -1,5 +1,9 @@
 class PicsController < ApplicationController
   def index
-    @pic = Pic.all
+    @pics = Pic.all
+  end
+
+  def show
+    @pic = Pic.find(params[:id])
   end
 end
