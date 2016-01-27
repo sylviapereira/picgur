@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'pics#index'
   get 'pics' => 'pics#index'
 
   post 'pics' => 'pics#create'
